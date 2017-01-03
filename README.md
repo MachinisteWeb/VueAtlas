@@ -79,11 +79,6 @@ puis en utilisant la commande :
 ```
 
 
-## Exemple en ligne ##
-
-Vous pouvez voir fonctionner ce repository à l'adresse : [http://bruno.lesieur.name/](http://bruno.lesieur.name/).
-
-
 -----
 
 
@@ -160,8 +155,3 @@ then using the command:
 ```
 \> node </path/to/>node-atlas/ --webconfig webconfig.prod.json
 ```
-
-
-### Online Example ###
-
-You can see this repository running at: [http://bruno.lesieur.name/](http://bruno.lesieur.name/) (Fr).

@@ -1,0 +1,16 @@
+<div class="todo-list">
+    <h1>Todo list</h1>
+    <div class="todo-list--content">
+        <ul v-if="todos.length">
+            <li v-for="(todo, index) in todos">
+                <strong>{{ todo.title }}</strong> : {{ todo.description }} <span v-if="form" v-on:click="removeTodo(index)">[X]</span>
+            </li>
+        </ul>
+    </div>
+    <div v-if="form" class="todo-list--form">
+        Nouveau:
+        <input v-model="newTitle" placeholder="Titre">
+        <input v-model="newDescription" placeholder="Description">
+        <button v-on:click="addTodo">Ajouter</button>
+    </div>
+</div>

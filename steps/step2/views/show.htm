@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>SSR</title>
+	</head>
+	<body>
+		<div class="todo-list">
+			<h1>Dans le futur</h1>
+			<? if (specific.todos.length) { ?>
+			<ul>
+				<? for (var i = 0; i < specific.todos.length; i++) { ?>
+				<li><strong><?- specific.todos[i].title ?></strong> : <?- specific.todos[i].description ?></li>
+				<? } ?>
+			</ul>
+			<? } ?>
+		</div>
+	</body>
+</html>

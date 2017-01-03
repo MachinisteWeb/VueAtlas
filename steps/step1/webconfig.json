@@ -1,0 +1,8 @@
+{ 
+	"routes": {
+		"/a-faire": {
+			"view": "show.htm",
+			"variation": "data.json"
+		}
+	}
+}

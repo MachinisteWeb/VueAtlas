@@ -1,0 +1,18 @@
+{
+	"statics": {
+		"/view-model": "views/partials",
+		"/data": "/data"
+	},
+	"routes": {
+		"/": {
+			"view": "index.htm",
+			"variation": "show.json",
+			"controller": "index.js"
+		},
+		"/editer": {
+			"view": "index.htm",
+			"variation": "edit.json",
+			"controller": "index.js"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>SSR</title>
+	</head>
+	<body>
+		<div class="todo-list" data-model="<?= JSON.stringify(specific.todos) ?>">
+			<h1>Dans le futur</h1>
+			<div class="todo-list--content">
+		        <ul v-if="todos.length">
+		            <li v-for="(todo, index) in todos">
+		                <strong>{{ todo.title }}</strong> : {{ todo.description }} <span v-on:click="removeTodo(index)">[X]</span>
+		            </li>
+		        </ul>
+	        </div>
+	        <div class="todo-list--form">
+	        	Nouveau:
+        	    <input v-model="newTitle" placeholder="Titre">
+			    <input v-model="newDescription" placeholder="Description">
+			    <button v-on:click="addTodo">Ajouter</button>
+	        </div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.min.js"></script>
+		<script src="javascript/todo-list.js"></script>
+	</body>
+</html>

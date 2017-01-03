@@ -1,0 +1,21 @@
+{
+	"statics": {
+		"/view-model": "views/partials",
+		"/data": "/data"
+	},
+	"routes": {
+		"/": {
+			"view": "all.htm",
+			"variation": "data.json",
+			"controller": "all.js"
+		},
+		"/a-faire": {
+			"view": "show.htm",
+			"variation": "data.json"
+		},
+		"/gerer-a-faire": {
+			"view": "update.htm",
+			"variation": "data.json"
+		}
+	}
+}

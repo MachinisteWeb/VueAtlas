@@ -1,0 +1,12 @@
+{ 
+	"routes": {
+		"/a-faire": {
+			"view": "show.htm",
+			"variation": "data.json"
+		},
+		"/gerer-a-faire": {
+			"view": "update.htm",
+			"variation": "data.json"
+		}
+	}
+}

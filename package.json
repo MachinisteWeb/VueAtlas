@@ -1,0 +1,26 @@
+{
+  "name": "vue-atlas",
+  "version": "0.1.0",
+  "author": "Bruno Lesieur <bruno.lesieur@gmail.com>",
+  "description": "Exemple de développement de site Node.js.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Haeresis/VueAtlas.git"
+  },
+  "license": {
+    "type": "GPL-2.0",
+    "url": "https://github.com/Haeresis/VueAtlas/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/Haeresis/VueAtlas/issues"
+  },
+  "dependencies": {
+    "vue": "2.1.x",
+    "vue-server-renderer": "2.1.x"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "readmeFilename": "README.md"
+}

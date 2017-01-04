@@ -1,12 +1,12 @@
 (function () {
-    var setTodos = function (view, model, form) {
+    var setTodos = function (view, model, editable, callback) {
         return new Vue({
             template: view,
             data: {
                 "todos": model,
                 "newTitle": "",
                 "newDescription": "",
-                "form": form
+                "editable": editable
             },
             methods: {
                 addTodo: function () {
@@ -16,9 +16,15 @@
                     });
                     this.newTitle = "";
                     this.newDescription = "";
+                    if (callback) {
+                        callback(this.todos);
+                    }
                 },
                 removeTodo: function (index) {
                     this.todos.splice(index, 1);
+                    if (callback) {
+                        callback(this.todos);
+                    }
                 }
             }
         });

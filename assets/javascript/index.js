@@ -1,21 +1,18 @@
-var todoList = function (client) {
+var todoList = function (editable) {
 	$.ajax({
 	  url: "data/todo-list.json"
 	}).done(function (model) {
 		$.ajax({
 		  url: "view-model/todo-list.htm"
 		}).done(function (view) {
-			var todos = setTodos(view, model, client),
-				lastLength;
-			todos.$mount(".todo-list");
-	        todos.$watch("todos", function (newVal) {
-	        	if (newVal.length !== lastLength) {
-		  			NA.socket.emit("update-todo", newVal);
-	        	}
-		  		lastLength = newVal.length;
+			var todos = setTodos(view, model, editable, function (value) {
+				console.log("send");
+				NA.socket.emit("update-todo", value);
 			});
-			NA.socket.on("update-todo", function (newVal) {
-				todos.todos = newVal;
+			todos.$mount(".todo-list");
+			NA.socket.on("update-todo", function (value) {
+				console.log("received");
+				todos.todos = value;
 			});
 		});
 	});

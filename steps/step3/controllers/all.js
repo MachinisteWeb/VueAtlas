@@ -1,5 +1,5 @@
 /* jshint node: true */
-exports.changeDom = function (next, locals, request, response) {
+exports.changeDom = function (next, locals) {
 	var NA = this,
 		Vue = require("vue"),
 		renderers = require("vue-server-renderer"),
@@ -15,7 +15,8 @@ exports.changeDom = function (next, locals, request, response) {
 	fs.readFile(view, "utf-8", function (error, view) {
 		fs.readFile(data, "utf-8", function (error, data) {
 			renderer.renderToString(require(model)(view, JSON.parse(data)), function (error, html) {
-				response.send(locals.dom.replace('<section class="todo-list"></section>', html.replace('server-rendered="true"', "")));
+				locals.dom = locals.replace('<section class="todo-list"></section>', html.replace('server-rendered="true"', ""));
+				next();
 			});
 		});
 	});

@@ -16,8 +16,8 @@
     "url": "https://github.com/Haeresis/VueAtlas/issues"
   },
   "dependencies": {
-    "vue": "2.1.x",
-    "vue-server-renderer": "2.1.x"
+    "vue": "2.6.x",
+    "vue-server-renderer": "2.6.x"
   },
   "engines": {
     "node": ">=4.0.0"
